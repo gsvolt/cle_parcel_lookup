@@ -32,3 +32,9 @@ dist:
 
 dist_deploy:
 	pip3 install dist/cle_parcel_lookup-1.0.0-py3-none-any.whl
+
+container_build:
+	docker build --tag=cle_parcel_lookup_image .
+
+container_run: container_build
+	docker run -d --name cle_parcel_lookup -p 5000:5000 cle_parcel_lookup_image
