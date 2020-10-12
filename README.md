@@ -65,6 +65,8 @@ OR
 pip3 install -r requirements-dev.txt
 ```
 
+- Edit the file `cle_parcel_lookup\static\parcel.js` and update `apiKey` variable with a proper API Key from Google.
+
 - Run the program in development mode
 
 Since this is a web application developed using Python and Flask, in this step we use the flask binary to host a web server locally.
@@ -117,6 +119,49 @@ OR
 ```bash
 pip3 install dist/cle_parcel_lookup-1.0.0-py3-none-any.whl
 ```
+
+## Installation on Windows
+
+Note: Pre-requisite: You have already installed Python 3.6 or higher
+
+- Open command prompt and clone the project:
+
+```bash
+git clone https://github.com/gsvolt/cle_parcel_lookup.git
+cd cle_parcel_lookup
+```
+
+- Setup a virtual environment
+
+```bash
+python -m venv venv
+```
+
+- Activate the virtual environment
+
+```bash
+venv\Scripts\activate
+```
+ 
+- Install dependencies
+
+```
+pip install -r requirements-dev.txt
+```
+
+- Edit the file `cle_parcel_lookup\static\parcel.js` and update `apiKey` variable with a proper API Key from Google.
+
+- Run the program in development mode
+
+```
+set "FLASK_APP=cle_parcel_lookup" & set "FLASK_ENV=development" & flask run
+```
+
+- At this point, please open your browser and visit `http://localhost:5000` to access the application.
+
+- To cleanup after viewing the application, do make sure to press `CTRL-C` to
+end the flask session.
+
 
 ## Other Directives
 
