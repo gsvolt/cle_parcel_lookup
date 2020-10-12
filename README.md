@@ -11,7 +11,7 @@ Here's what it looks like:
 ## Features
 
 - Provides parcel details (image of property, location of the property on a map, and other related information about the parcel) for five parcel numbers located in Cleveland.
-- Exposes a web-api endpoint (/parcel/NNN-NN-NNNN) for ease of access that interfaces with NEOCANDO's webapi here: http://neocando.case.edu/cando/housingReport/lbxml.jsp?parcel=NNN-NN-NNNN (where N is assumed to be a number).
+- Exposes a web-api endpoint (/parcel/NNN-NN-NNN) for ease of access that interfaces with NEOCANDO's webapi here: http://neocando.case.edu/cando/housingReport/lbxml.jsp?parcel=NNN-NN-NNN (where N is assumed to be a number).
 - Uses Python, Flask, Google Maps Embed API to deliver all these features (among other Python packages).
 
 ## Installation - Linux (Or similar Operating Systems)
