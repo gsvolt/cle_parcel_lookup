@@ -18,6 +18,15 @@ Here's what it looks like:
 
 To aid runtime of this application, a Makefile contains commands that simplifies the process. For each step below the make directives as well as the corresponding commands in bash will be described in an attempt to get the project to run locally.
 
+- Clone this repo using Git
+
+Easiest way to get this project on your system is to download it using git client in your terminal and change your working folder to the project root:
+
+```bash
+git clone https://github.com/gsvolt/cle_parcel_lookup
+cd cle_parcel_lookup
+```
+
 - Setup virtual environment
 
 Its best to install a virtual environment first to protect your host operating system from any modifications this program may make.
