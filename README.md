@@ -65,6 +65,8 @@ OR
 pip3 install -r requirements-dev.txt
 ```
 
+- Edit the file `cle_parcel_lookup\static\parcel.js` and update `apiKey` variable with a proper API Key from Google.
+
 - Run the program in development mode
 
 Since this is a web application developed using Python and Flask, in this step we use the flask binary to host a web server locally.
@@ -118,9 +120,53 @@ OR
 pip3 install dist/cle_parcel_lookup-1.0.0-py3-none-any.whl
 ```
 
+## Installation on Windows
+
+Note: Pre-requisite: You have already installed Python 3.6 or higher
+
+- Open command prompt and clone the project:
+
+```bash
+git clone https://github.com/gsvolt/cle_parcel_lookup.git
+cd cle_parcel_lookup
+```
+
+- Setup a virtual environment
+
+```bash
+python -m venv venv
+```
+
+- Activate the virtual environment
+
+```bash
+venv\Scripts\activate
+```
+ 
+- Install dependencies
+
+```
+pip install -r requirements-dev.txt
+```
+
+- Edit the file `cle_parcel_lookup\static\parcel.js` and update `apiKey` variable with a proper API Key from Google.
+
+- Run the program in development mode
+
+```
+set "FLASK_APP=cle_parcel_lookup" & set "FLASK_ENV=development" & flask run
+```
+
+- At this point, please open your browser and visit `http://localhost:5000` to access the application.
+
+- To cleanup after viewing the application, do make sure to press `CTRL-C` to
+end the flask session.
+
+
 ## Other Directives
 
-This project uses `pylint` as its linter - with its default settings. Here's how you can lint the project:
+This project uses `pylint` (with its default settings) as well as `flake8` as its linter (to conform with github's python action). 
+Here's how you can lint the project:
 
 Make directive:
 
@@ -132,6 +178,8 @@ OR
 
 ```bash
 pylint cle_parcel_lookup
+flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude __pycache__,.coverage,.github,.git,.pytest_cache,.venv,.vscode,build,images,dist
+flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude __pycache__,.coverage,.github,.git,.pytest_cache,.venv,.vscode,build,images,dist
 ```
 
 In addition to linting, the project uses `pytest` to run unit tests. Here's how you run pytest on the project:
