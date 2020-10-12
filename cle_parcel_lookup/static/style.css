@@ -11,12 +11,19 @@
 	font-size: 18px;
 }
 
+.formattedAddresses {
+    margin-left: 0.5em;
+}
+
 #parcelImage {
-	float: left;
-	margin-right: 1em;
+    margin-right: 2em;
 }
 
 #map {
 	width: 500px;
-	height: 375px;
+    height: 375px;
+}
+
+.rowData {
+    border-bottom: 1px solid rgb(185, 185, 185);
 }
