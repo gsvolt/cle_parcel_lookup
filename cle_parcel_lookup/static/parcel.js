@@ -9,7 +9,7 @@ function updateData() {
 }
 
 function loadMap(latitude, longitude) {
-	const apiKey = 'AIzaSyCpyssflbjDHDFQGHFZarZ7uRP_QJOM1CQ';
+	const apiKey = 'APIKEY';
 	let mapUrl = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${latitude},${longitude}`;
 	map_frame=`<iframe width="500" height="375" frameborder="0" style="border:0" src="${mapUrl}" allowfullscreen></iframe>`;
 	$('#map').html(map_frame);
