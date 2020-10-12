@@ -10,9 +10,9 @@ Here's what it looks like:
 
 ## Features
 
-- Provides parcel details (image of property, location of the property on a map, and other related information about the parcel) for five parcel numbers located in Cleveland.
+- Provides parcel details (image of property, location of the property on a map, approximate street addresses and other related information about the parcel) for five parcel numbers located in Cleveland.
 - Exposes a web-api endpoint (/parcel/NNN-NN-NNN) for ease of access that interfaces with NEOCANDO's webapi here: http://neocando.case.edu/cando/housingReport/lbxml.jsp?parcel=NNN-NN-NNN (where N is assumed to be a number).
-- Uses Python, Flask, Google Maps Embed API to deliver all these features (among other Python packages).
+- Uses Python, Flask, Google Maps Embed API and Reverse Geocoding API to deliver all these features (among other Python packages).
 
 ## Installation - Linux (Or similar Operating Systems)
 
@@ -163,7 +163,7 @@ set "FLASK_APP=cle_parcel_lookup" & set "FLASK_ENV=development" & flask run
 end the flask session.
 
 
-## Other Directives
+## Development Features
 
 This project uses `pylint` (with its default settings) as well as `flake8` as its linter (to conform with github's python action). 
 Here's how you can lint the project:
