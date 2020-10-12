@@ -1,0 +1,22 @@
+#parcelImage, #map {
+	margin-bottom: 1em;
+}
+
+.header,  h2{
+	color: #039;
+	border-bottom: 2px solid #6678b1;
+}
+
+.header {
+	font-size: 18px;
+}
+
+#parcelImage {
+	float: left;
+	margin-right: 1em;
+}
+
+#map {
+	width: 500px;
+	height: 375px;
+}
