@@ -1,6 +1,5 @@
 """ Init method for cle_parcel_lookup module """
 
-import os
 from flask import Flask
 from . import cle_parcel_lookup
 

@@ -165,7 +165,8 @@ end the flask session.
 
 ## Other Directives
 
-This project uses `pylint` as its linter - with its default settings. Here's how you can lint the project:
+This project uses `pylint` (with its default settings) as well as `flake8` as its linter (to conform with github's python action). 
+Here's how you can lint the project:
 
 Make directive:
 
@@ -177,6 +178,8 @@ OR
 
 ```bash
 pylint cle_parcel_lookup
+flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude __pycache__,.coverage,.github,.git,.pytest_cache,.venv,.vscode,build,images,dist
+flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude __pycache__,.coverage,.github,.git,.pytest_cache,.venv,.vscode,build,images,dist
 ```
 
 In addition to linting, the project uses `pytest` to run unit tests. Here's how you run pytest on the project:

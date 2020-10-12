@@ -17,6 +17,8 @@ freeze:
 
 lint:
 	pylint cle_parcel_lookup
+	flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude __pycache__,.coverage,.github,.git,.pytest_cache,.venv,.vscode,build,images,dist
+	flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude __pycache__,.coverage,.github,.git,.pytest_cache,.venv,.vscode,build,images,dist
 
 test:
 	PYTHONPATH=. pytest -v
