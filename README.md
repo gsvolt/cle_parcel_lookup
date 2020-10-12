@@ -70,6 +70,8 @@ FLASK_APP=cle_parcel_lookup FLASK_ENV=development flask run
 
 - At this point, please open your browser and visit `http://localhost:5000` to access the application.
 
+- To cleanup after viewing the application, do make sure to press `CTRL-C` to
+end the flask session.
 
 ## Alternative Installation using Wheel
 
