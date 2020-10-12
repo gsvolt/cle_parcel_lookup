@@ -1,0 +1,3 @@
+graft cle_parcel_lookup/static
+graft cle_parcel_lookup/templates
+global-exclude *.pyc
