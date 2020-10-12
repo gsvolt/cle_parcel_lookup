@@ -35,13 +35,17 @@ Make directive:
 
 ```bash
 make create_venv
-make activate_venv
 ```
 
 OR 
 
 ```bash
 python3 -m venv .venv
+```
+
+- Activate Virtual Environment 
+
+```bash
 source .venv/bin/activate
 ```
 
